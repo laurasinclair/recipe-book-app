@@ -1,0 +1,10 @@
+.recipeList-Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
+}

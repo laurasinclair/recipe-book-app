@@ -1,0 +1,279 @@
+[
+  {
+    "id": "1",
+    "name": "Paneer Butter Masala",
+    "category": "Indian",
+    "prepTime": "15 mins",
+    "cookTime": "25 mins",
+    "servings": 2,
+    "ingredients": [
+      "200g paneer (cubed)",
+      "2 medium tomatoes",
+      "1 medium onion",
+      "2 tbsp butter",
+      "1 tbsp cream",
+      "1 tsp garam masala",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Heat butter in a pan and sauté onions until golden.",
+      "Add tomatoes, cook until soft, then blend into a smooth paste.",
+      "Add paste back to pan, mix in spices and paneer.",
+      "Simmer for 5–7 minutes and finish with cream."
+    ],
+    "image": "/images/pannerButterMasala.png",
+    "easy": false
+  },
+  {
+    "id": "2",
+    "name": "Vegetable Biryani",
+    "category": "Indian",
+    "prepTime": "20 mins",
+    "cookTime": "30 mins",
+    "servings": 3,
+    "ingredients": [
+      "1 cup basmati rice",
+      "1 cup mixed vegetables (carrot, beans, peas)",
+      "1 onion (sliced)",
+      "2 tbsp biryani masala",
+      "1 tbsp ghee",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Wash and soak rice for 15 mins, then cook until 80% done.",
+      "Sauté onions, vegetables, and biryani masala in ghee.",
+      "Layer vegetables and rice in a pot, cook on low for 10 mins.",
+      "Serve hot with raita."
+    ],
+    "image": "/images/vegetableBiriyani.png",
+    "easy": false
+  },
+  {
+    "id": "3",
+    "name": "Masala Dosa",
+    "category": "Indian",
+    "prepTime": "12 hrs (batter fermentation)",
+    "cookTime": "15 mins",
+    "servings": 4,
+    "ingredients": [
+      "2 cups dosa batter",
+      "2 boiled potatoes",
+      "1 onion (sliced)",
+      "1 green chili",
+      "1/2 tsp turmeric",
+      "1 tbsp oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Mash boiled potatoes and cook with onions, chili, turmeric, and salt.",
+      "Spread dosa batter on hot pan, place potato filling inside, fold.",
+      "Serve hot with chutney and sambar."
+    ],
+    "image": "/images/masalaDosa.png",
+    "easy": false
+  },
+  {
+    "id": "4",
+    "name": "Pasta Alfredo",
+    "category": "Italian",
+    "prepTime": "10 mins",
+    "cookTime": "15 mins",
+    "servings": 2,
+    "ingredients": [
+      "200g fettuccine pasta",
+      "1 cup cream",
+      "1/2 cup parmesan cheese",
+      "2 tbsp butter",
+      "Salt and pepper to taste"
+    ],
+    "instructions": [
+      "Cook pasta until al dente.",
+      "In another pan, melt butter, add cream and cheese.",
+      "Mix pasta with sauce and season with salt and pepper."
+    ],
+    "image": "/images/alfredo.png",
+    "easy": true
+  },
+  {
+    "id": "5",
+    "name": "Margherita Pizza",
+    "category": "Italian",
+    "prepTime": "15 mins",
+    "cookTime": "15 mins",
+    "servings": 2,
+    "ingredients": [
+      "1 pizza base",
+      "1/2 cup tomato sauce",
+      "100g mozzarella cheese",
+      "Fresh basil leaves",
+      "Olive oil"
+    ],
+    "instructions": [
+      "Spread sauce on pizza base.",
+      "Add mozzarella and basil leaves.",
+      "Bake at 220°C for 12–15 mins."
+    ],
+    "image": "/images/margheritaPizza.png",
+    "easy": false
+  },
+  {
+    "id": "6",
+    "name": "Kung Pao Chicken",
+    "category": "Asian",
+    "prepTime": "15 mins",
+    "cookTime": "15 mins",
+    "servings": 3,
+    "ingredients": [
+      "300g chicken breast (cubed)",
+      "2 tbsp soy sauce",
+      "1 tbsp vinegar",
+      "1/2 cup peanuts",
+      "2 dried red chilies",
+      "1 tbsp garlic",
+      "1 tbsp oil"
+    ],
+    "instructions": [
+      "Marinate chicken in soy sauce and vinegar.",
+      "Stir-fry chicken with garlic and chilies.",
+      "Add peanuts and toss well before serving."
+    ],
+    "image": "/images/kungPaoChicken.png",
+    "easy": false
+  },
+  {
+    "id": "7",
+    "name": "Vegetable Fried Rice",
+    "category": "Asian",
+    "prepTime": "10 mins",
+    "cookTime": "10 mins",
+    "servings": 2,
+    "ingredients": [
+      "2 cups cooked rice",
+      "1/2 cup mixed vegetables",
+      "2 tbsp soy sauce",
+      "1 tbsp oil",
+      "Salt to taste"
+    ],
+    "instructions": [
+      "Heat oil in wok, sauté vegetables.",
+      "Add rice, soy sauce, and stir-fry on high heat.",
+      "Serve hot."
+    ],
+    "image": "/images/vegetableFriedRice.png",
+    "easy": true
+  },
+  {
+    "id": "8",
+    "name": "Ramen",
+    "category": "Asian",
+    "prepTime": "5 mins",
+    "cookTime": "10 mins",
+    "servings": 1,
+    "ingredients": [
+      "1 packet ramen noodles",
+      "2 cups chicken broth",
+      "1 boiled egg",
+      "1 tbsp soy sauce",
+      "Green onions"
+    ],
+    "instructions": [
+      "Cook noodles in chicken broth.",
+      "Add soy sauce, top with boiled egg and green onions."
+    ],
+    "image": "/images/ramen.png",
+    "easy": true
+  },
+  {
+    "id": "9",
+    "name": "Chocolate Chip Cookies",
+    "category": "Dessert",
+    "prepTime": "10 mins",
+    "cookTime": "12 mins",
+    "servings": 10,
+    "ingredients": [
+      "1 cup all-purpose flour",
+      "1/2 cup butter",
+      "1/2 cup brown sugar",
+      "1/4 cup white sugar",
+      "1 tsp vanilla extract",
+      "1/2 tsp baking soda",
+      "1/4 tsp salt",
+      "1/2 cup chocolate chips"
+    ],
+    "instructions": [
+      "Cream together butter, sugars, and vanilla.",
+      "Mix in dry ingredients, then fold in chocolate chips.",
+      "Scoop onto baking sheet and bake at 175°C for 10–12 mins."
+    ],
+    "image": "/images/chocoChipCookie.png",
+    "easy": true
+  },
+  {
+    "id": "10",
+    "name": "Brownies",
+    "category": "Dessert",
+    "prepTime": "15 mins",
+    "cookTime": "25 mins",
+    "servings": 8,
+    "ingredients": [
+      "1 cup all-purpose flour",
+      "1/2 cup cocoa powder",
+      "1 cup sugar",
+      "1/2 cup butter",
+      "2 eggs",
+      "1 tsp vanilla extract"
+    ],
+    "instructions": [
+      "Mix dry ingredients.",
+      "Beat eggs, butter, and vanilla, then combine.",
+      "Bake at 175°C for 25 mins."
+    ],
+    "image": "/images/brownies.png",
+    "easy": false
+  },
+  {
+    "id": "11",
+    "name": "Cheesecake",
+    "category": "Dessert",
+    "prepTime": "20 mins",
+    "cookTime": "50 mins",
+    "servings": 6,
+    "ingredients": [
+      "200g cream cheese",
+      "100g sugar",
+      "2 eggs",
+      "100g biscuits (crushed)",
+      "50g butter"
+    ],
+    "instructions": [
+      "Mix crushed biscuits and butter for base, press into tin.",
+      "Beat cream cheese, sugar, and eggs, pour over base.",
+      "Bake at 160°C for 50 mins."
+    ],
+    "image": "/images/cheeseCake.png",
+    "easy": false
+  },
+  {
+    "id": "12",
+    "name": "Tiramisu",
+    "category": "Dessert",
+    "prepTime": "20 mins",
+    "cookTime": "Chill 4 hrs",
+    "servings": 6,
+    "ingredients": [
+      "200g mascarpone cheese",
+      "100g sugar",
+      "2 eggs",
+      "100ml coffee",
+      "12 ladyfinger biscuits",
+      "Cocoa powder for dusting"
+    ],
+    "instructions": [
+      "Dip ladyfingers in coffee, layer in dish.",
+      "Whip mascarpone, eggs, sugar, spread over biscuits.",
+      "Repeat layers, dust with cocoa, chill for 4 hrs."
+    ],
+    "image": "/images/tiramisu.png",
+    "easy": false
+  }
+]
