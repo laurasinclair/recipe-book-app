@@ -23,6 +23,7 @@ body {
 
 .mainComponent-container .mainContent {
   width: 100%;
+  overflow-y: auto;
   /* border: 1px solid blue; */
   overflow: hidden;
   padding: 20px;

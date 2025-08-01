@@ -11,6 +11,12 @@
 .sideBar-item:hover {
   transform: scale(1.2);
 }
+
+/* 
+for clarity:
+aside .sideBar-container 👉 anything with the class .sideBar-container inside of an "aside"
+aside.sideBar-container 👉 any "aside" that has the class .sideBar-container
+*/
 aside.sideBar-container {
   display: flex;
   flex-direction: column;
@@ -21,5 +27,8 @@ aside.sideBar-container {
   padding: 15px;
   font-weight: bold;
   border-right: 1px solid #ccc;
+
+  position: sticky; /* 👉 will stick to the screen once it's in view... */
+  top: 0 /* 👉 ... 0px from the top of the screen */
 }
 
