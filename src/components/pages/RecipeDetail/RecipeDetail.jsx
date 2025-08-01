@@ -29,15 +29,15 @@ function RecipeDetail({ mockRecipeList }) {
 
           <h2>Ingredients:</h2>
           <ul>
-            {recipe.ingredients.map((ingredient) => {
-              return <li>{ingredient}</li>;
+            {recipe.ingredients.map((ingredient, i) => {
+              return <li key={`${ingredient}_${i}`}>{ingredient}</li>;
             })}
           </ul>
 
           <h2>Instructions</h2>
           <ol>
-            {recipe.instructions.map((instruction) => {
-              return <li>{instruction}</li>;
+            {recipe.instructions.map((instruction, i) => {
+              return <li key={`${instruction}_${i}`}>{instruction}</li>;
             })}
           </ol>
 
