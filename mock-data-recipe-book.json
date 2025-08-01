@@ -22,7 +22,8 @@
       "Simmer for 5–7 minutes and finish with cream."
     ],
     "image": "/images/pannerButterMasala.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "2",
@@ -46,7 +47,8 @@
       "Serve hot with raita."
     ],
     "image": "/images/vegetableBiriyani.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "3",
@@ -70,7 +72,8 @@
       "Serve hot with chutney and sambar."
     ],
     "image": "/images/masalaDosa.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "4",
@@ -92,7 +95,8 @@
       "Mix pasta with sauce and season with salt and pepper."
     ],
     "image": "/images/alfredo.png",
-    "easy": true
+    "easy": true,
+    "isFav": false
   },
   {
     "id": "5",
@@ -114,7 +118,8 @@
       "Bake at 220°C for 12–15 mins."
     ],
     "image": "/images/margheritaPizza.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "6",
@@ -138,7 +143,8 @@
       "Add peanuts and toss well before serving."
     ],
     "image": "/images/kungPaoChicken.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "7",
@@ -160,7 +166,8 @@
       "Serve hot."
     ],
     "image": "/images/vegetableFriedRice.png",
-    "easy": true
+    "easy": true,
+    "isFav": false
   },
   {
     "id": "8",
@@ -181,7 +188,8 @@
       "Add soy sauce, top with boiled egg and green onions."
     ],
     "image": "/images/ramen.png",
-    "easy": true
+    "easy": true,
+    "isFav": false
   },
   {
     "id": "9",
@@ -206,7 +214,8 @@
       "Scoop onto baking sheet and bake at 175°C for 10–12 mins."
     ],
     "image": "/images/chocoChipCookie.png",
-    "easy": true
+    "easy": true,
+    "isFav": false
   },
   {
     "id": "10",
@@ -229,7 +238,8 @@
       "Bake at 175°C for 25 mins."
     ],
     "image": "/images/brownies.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "11",
@@ -251,7 +261,8 @@
       "Bake at 160°C for 50 mins."
     ],
     "image": "/images/cheeseCake.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   },
   {
     "id": "12",
@@ -274,6 +285,7 @@
       "Repeat layers, dust with cocoa, chill for 4 hrs."
     ],
     "image": "/images/tiramisu.png",
-    "easy": false
+    "easy": false,
+    "isFav": false
   }
 ]

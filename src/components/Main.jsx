@@ -1,12 +1,13 @@
-import mockRecipeList from "../../mock-data-recipe-book.json";
-import RecipeList from "./RecipeList";
+import RecipeList from "./RecipeList/RecipeList";
 
-function Main() {
+function Main({ recipes, setRecipes, handleFavourite }) {
   return (
     <>
-      <div className="wrapping-Container">
-        <RecipeList mockRecipeList={mockRecipeList} />
-      </div>
+      <RecipeList
+        recipes={recipes}
+        setRecipes={setRecipes}
+        handleFavourite={handleFavourite}
+      />
     </>
   );
 }

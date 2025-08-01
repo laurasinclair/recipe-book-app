@@ -1,4 +1,5 @@
-import recipeBookLogo from "../assets/recipe-book-logo.png";
+import recipeBookLogo from "../../assets/recipe-book-logo.png";
+import "./header.css";
 
 function Header() {
   return (
@@ -6,6 +7,7 @@ function Header() {
       <header>
         <div className="headerComponent">
           <div>Recipe-Book</div>
+          <div>HomePage</div>
           <img src={recipeBookLogo} />
         </div>
       </header>

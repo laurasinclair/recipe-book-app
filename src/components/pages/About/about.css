@@ -1,0 +1,51 @@
+.about-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff7f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-container h1 {
+  text-align: center;
+  color: #ff7043;
+  margin-bottom: 20px;
+}
+.about-container h2 {
+  margin-top: 30px;
+  color: #ff5722;
+}
+.about-container p {
+  line-height: 1.6;
+  color: #444;
+  font-size: 16px;
+}
+.github-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #ff7043;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  /* transition: background 0.3s; */
+}
+.github-link:hover {
+  background: #ff5722;
+}
+
+.homeBtn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #ff7043;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: #ff7043;
+  font: "Pacifico";
+}
+.homeBtn:hover {
+  background: #ff5722;
+}

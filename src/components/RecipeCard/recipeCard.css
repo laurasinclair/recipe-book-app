@@ -4,11 +4,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgb(94, 30, 30);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .recipeCard-Container:hover {
   transform: scale(1.02);
 }
-
+.recipeCard-Container h4,
+.textName {
+  border-bottom: 1px dotted grey;
+}
 .deleteButton {
   margin-top: 10px;
   border: none;
@@ -39,4 +44,23 @@
   font-weight: bold;
   border-radius: 6px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.favourites {
+  position: absolute;
+  display: inline-block;
+  bottom: 10px;
+  right: 10px;
+  padding: 4px 8px;
+}
+
+.favourites:hover {
+  box-shadow: 0 2px 5px rgba(1, 1, 1, 0);
+  cursor: pointer;
+}
+.cookTimeDetails {
+  text-align: center;
+}
+.deleteButton :hover {
+  transform: scale(1.02);
+  cursor: pointer;
 }

@@ -1,0 +1,28 @@
+.nav-Link {
+  text-decoration: none;
+  color: rgb(85, 29, 29);
+}
+.sideBar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sideBar-item {
+  text-align: center;
+  width: 100%;
+}
+
+.sideBar-item:hover {
+  transform: scale(1.2);
+}
+aside {
+  background-color: #ffe0b2;
+  width: 200px;
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: bold;
+  border-right: 1px solid #ccc;
+}

@@ -1,0 +1,15 @@
+import errorGif from "../../../assets/Error404.gif";
+
+import "./errorPage.css";
+
+function ErrorPage() {
+  return (
+    <>
+      <div className="errorImage">
+        <img src={errorGif} />
+      </div>
+    </>
+  );
+}
+
+export default ErrorPage;
