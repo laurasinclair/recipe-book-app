@@ -30,38 +30,43 @@ function App() {
     setRecipes(newRecipeList);
   };
   return (
-    <>
-      <div>
-        <Header></Header>
-        <div className="mainComponent-container">
-          <Sidebar></Sidebar>
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <Main
-                  recipes={recipes}
-                  setRecipes={setRecipes}
-                  handleFavourite={handleFavourite}
-                />
-              }
-            />
-            <Route
-              path="/recipe-detail/:recipeId"
-              element={<RecipeDetail mockRecipeList={mockRecipeList} />}
-            />
-            <Route
-              path="/favourites"
-              element={<Favourite recipes={recipes} />}
-            />
-            <Route path="/add-recipe" element={<AddRecipe />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<ErrorPage />} />
-          </Routes>
-        </div>
-        <Footer></Footer>
-      </div>
-    </>
+		<>
+			<Header></Header>
+			
+			<div className="mainComponent-container">
+				<Sidebar></Sidebar>
+
+				{/* 👇 it will be easier to control this section's layout if it has its own div */}
+				<div id="main" className="mainContent">
+					<Routes>
+						<Route
+							path="/"
+							element={
+								<Main
+									recipes={recipes}
+									setRecipes={setRecipes}
+									handleFavourite={handleFavourite}
+								/>
+							}
+						/>
+						<Route
+							path="/recipe-detail/:recipeId"
+							element={
+								<RecipeDetail mockRecipeList={mockRecipeList} />
+							}
+						/>
+						<Route
+							path="/favourites"
+							element={<Favourite recipes={recipes} />}
+						/>
+						<Route path="/add-recipe" element={<AddRecipe />} />
+						<Route path="/about" element={<About />} />
+						<Route path="*" element={<ErrorPage />} />
+					</Routes>
+				</div>
+			</div>
+			<Footer></Footer>
+		</>
   );
 }
 

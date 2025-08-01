@@ -2,11 +2,7 @@
   text-decoration: none;
   color: rgb(85, 29, 29);
 }
-.sideBar-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+
 .sideBar-item {
   text-align: center;
   width: 100%;
@@ -15,14 +11,15 @@
 .sideBar-item:hover {
   transform: scale(1.2);
 }
-aside {
-  background-color: #ffe0b2;
-  width: 200px;
-  height: 100vh;
-  padding: 15px;
+aside.sideBar-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  background-color: #ffe0b2;
+  /* width: 200px; 👉 let's try to avoid fixed width. It's now handled by .mainComponent-container */
+  height: 100vh;
+  padding: 15px;
   font-weight: bold;
   border-right: 1px solid #ccc;
 }
+

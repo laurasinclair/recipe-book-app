@@ -1,11 +1,31 @@
+:root {
+  --height-footer: 70px;
+}
+
 body {
   margin: 0;
+  padding: 0;
   font-family: "Pacifico", cursive;
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .mainComponent-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: [sidebar] 15% [main] auto; /* 👉 first column will be 200px wide, the rest automatically takes up all the space left. To adjust to your needs :) */
 }
+
+.mainComponent-container .mainContent {
+  width: 100%;
+  /* border: 1px solid blue; */
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: var(--height-footer); /* 👉 defined in root variables. Makes sure the footer doesn't hide our content */
+}
+
+* {
+  box-sizing: border-box; /* 👉 makes layout less impredictable (later when you add a padding to something, it might make things wider than you'd like) */
+}
+
