@@ -2,6 +2,10 @@
   --height-footer: 70px;
 }
 
+* {
+  box-sizing: border-box; /* 👉 makes layout less impredictable (later when you add a padding to something, it might make things wider than you'd like) */
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -14,7 +18,7 @@ body {
 
 .mainComponent-container {
   display: grid;
-  grid-template-columns: [sidebar] 15% [main] auto; /* 👉 first column will be 200px wide, the rest automatically takes up all the space left. To adjust to your needs :) */
+  grid-template-columns: [sidebar] 15% [main] auto; /* 👉 first column will be 15%  wide, the rest automatically takes up all the space left. To adjust to your needs :) */
 }
 
 .mainComponent-container .mainContent {
@@ -23,9 +27,5 @@ body {
   overflow: hidden;
   padding: 20px;
   margin-bottom: var(--height-footer); /* 👉 defined in root variables. Makes sure the footer doesn't hide our content */
-}
-
-* {
-  box-sizing: border-box; /* 👉 makes layout less impredictable (later when you add a padding to something, it might make things wider than you'd like) */
 }
 
