@@ -2,7 +2,8 @@ import errorGif from "../../../assets/Error404.gif";
 
 import "./errorPage.css";
 
-function ErrorPage() {
+function ErrorPage({ setTitle }) {
+  setTitle("Error Page");
   return (
     <>
       <div className="errorImage">

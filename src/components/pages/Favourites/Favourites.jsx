@@ -1,34 +1,56 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./favourites.css";
-function Favourite({ recipes }) {
+function Favourite({ recipes, setTitle }) {
+  setTitle("Favourites");
+  const navigate = useNavigate();
+  const handleNavigate = (recipeId) => {
+    navigate(`/recipe-detail/${recipeId}`);
+  };
+  const favouriteList = recipes.filter((oneRecipe) => oneRecipe.isFav === true);
   return (
     <>
-      <div className="favourites-container">
-        {recipes
-          .filter((oneRecipe) => oneRecipe.isFav === true)
-          .map((oneRecipe) => {
+      {favouriteList.length === 0 && (
+        <p className="emptyList"> The list is Empty</p>
+      )}
+      <div className="wholeFavouriteList-container">
+        <div className="favouritesList-container">
+          {favouriteList.map((oneRecipe) => {
             return (
-              <div className="favouriteCard" key={oneRecipe.id}>
-                <img src={oneRecipe.image} />
-                <div>{oneRecipe.name}</div>
-                <div>
-                  <strong>Cuisine:</strong>
-                  {oneRecipe.category}
+              <div
+                className="favourites-container"
+                onClick={() => handleNavigate(oneRecipe.id)}
+              >
+                <div className="imageWrapper" key={oneRecipe.id}>
+                  <img src={oneRecipe.image} />
                 </div>
-                <div>
-                  <strong>Cooking Time:</strong>
-                  {oneRecipe.cookTime}
+                <h2>{oneRecipe.name}</h2>
+                <div className="cookTimeDetails">
+                  <p className="globe">
+                    <span className="textName">
+                      <img src="/images/globe.png" />
+                    </span>
+                    {oneRecipe.category}
+                  </p>
+                  <div className="cookingInfo">
+                    <p className="timerImage">
+                      <span className="textName">
+                        <img src="/images/time.png" />
+                      </span>
+                      {oneRecipe.cookTime}
+                    </p>
+                    <p>
+                      <span className="textName">Servings:&nbsp;</span>
+                      {oneRecipe.servings}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <strong>Servings:</strong>
-                  {oneRecipe.servings}
-                </div>
-                <Link to="/">
-                  <button>Home</button>
-                </Link>
               </div>
             );
           })}
+        </div>
+        {/* <Link to="/">
+          <button className="homeBtn">Home</button>
+        </Link> */}
       </div>
     </>
   );

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import "./about.css";
-function About() {
+function About({ setTitle }) {
+  setTitle("About the Project");
   return (
     <>
       <div class="about-container">
@@ -31,7 +32,7 @@ function About() {
         </p>
 
         <Link to="/">
-          <button class="homeBtn">Home</button>
+          <button className="homeBtn">Home</button>
         </Link>
       </div>
     </>

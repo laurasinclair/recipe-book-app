@@ -11,9 +11,13 @@ import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import ErrorPage from "./components/pages/ErrorPage/ErrorPage";
 import Favourite from "./components/pages/Favourites/Favourites";
+import DeletedRecipes from "./components/pages/DeletedRecipes/DeletedRecipes";
 
 function App() {
   const [recipes, setRecipes] = useState(mockRecipeList);
+  const [deletedList, setDeletedList] = useState([]);
+  const [title, setTitle] = useState("Homepage");
+
   const handleFavourite = (e, id) => {
     e.stopPropagation();
     const newRecipeList = recipes.map((oneRecipe) => {
@@ -29,44 +33,77 @@ function App() {
 
     setRecipes(newRecipeList);
   };
-  return (
-		<>
-			<Header></Header>
-			
-			<div className="mainComponent-container">
-				<Sidebar></Sidebar>
 
-				{/* 👇 it will be easier to control this section's layout if it has its own div */}
-				<div id="main" className="mainContent">
-					<Routes>
-						<Route
-							path="/"
-							element={
-								<Main
-									recipes={recipes}
-									setRecipes={setRecipes}
-									handleFavourite={handleFavourite}
-								/>
-							}
-						/>
-						<Route
-							path="/recipe-detail/:recipeId"
-							element={
-								<RecipeDetail mockRecipeList={mockRecipeList} />
-							}
-						/>
-						<Route
-							path="/favourites"
-							element={<Favourite recipes={recipes} />}
-						/>
-						<Route path="/add-recipe" element={<AddRecipe />} />
-						<Route path="/about" element={<About />} />
-						<Route path="*" element={<ErrorPage />} />
-					</Routes>
-				</div>
-			</div>
-			<Footer></Footer>
-		</>
+  const handleDeletedItems = (recipeId) => {
+    const deletedItem = recipes.find((recipe) => {
+      return recipe.id === recipeId;
+    });
+    setDeletedList([...deletedList, deletedItem]);
+    console.log(deletedList);
+  };
+  const handleAddDeletedItem = (deletedItem) => {
+    setRecipes([...recipes, deletedItem]);
+    const filteredRecipeList = deletedList.filter((recipe) => {
+      return recipe.id !== deletedItem.id;
+    });
+    setDeletedList(filteredRecipeList);
+  };
+  return (
+    <>
+      <Header title={title}></Header>
+
+      <div className="mainComponent-container">
+        <Sidebar></Sidebar>
+
+        {/* 👇 it will be easier to control this section's layout if it has its own div */}
+        <div id="main" className="mainContent">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Main
+                  recipes={recipes}
+                  setRecipes={setRecipes}
+                  handleFavourite={handleFavourite}
+                  handleDeletedItems={handleDeletedItems}
+                  setTitle={setTitle}
+                />
+              }
+            />
+            <Route
+              path="/recipe-detail/:recipeId"
+              element={
+                <RecipeDetail
+                  mockRecipeList={mockRecipeList}
+                  setTitle={setTitle}
+                />
+              }
+            />
+            <Route
+              path="/favourites"
+              element={<Favourite recipes={recipes} setTitle={setTitle} />}
+            />
+            <Route
+              path="/add-recipe"
+              element={<AddRecipe setTitle={setTitle} />}
+            />
+            <Route path="/about" element={<About setTitle={setTitle} />} />
+            <Route
+              path="/deletedList"
+              element={
+                <DeletedRecipes
+                  deletedList={deletedList}
+                  handleAddDeletedItem={handleAddDeletedItem}
+                  setTitle={setTitle}
+                />
+              }
+            />
+            <Route path="*" element={<ErrorPage setTitle={setTitle} />} />
+          </Routes>
+        </div>
+      </div>
+      <Footer></Footer>
+    </>
   );
 }
 

@@ -1,3 +1,9 @@
+.sideBar-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .nav-Link {
   text-decoration: none;
   color: rgb(85, 29, 29);
@@ -17,18 +23,24 @@ for clarity:
 aside .sideBar-container 👉 anything with the class .sideBar-container inside of an "aside"
 aside.sideBar-container 👉 any "aside" that has the class .sideBar-container
 */
-aside.sideBar-container {
+aside.sideBar-whole-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   background-color: #ffe0b2;
   /* width: 200px; 👉 let's try to avoid fixed width. It's now handled by .mainComponent-container */
   height: 100vh;
   padding: 15px;
   font-weight: bold;
   border-right: 1px solid #ccc;
-
+  justify-content: space-between;
   position: sticky; /* 👉 will stick to the screen once it's in view... */
-  top: 0 /* 👉 ... 0px from the top of the screen */
+  top: 0; /* 👉 ... 0px from the top of the screen */
 }
 
+.selected {
+  text-decoration: underline black;
+}
+
+.trash-link {
+  margin-bottom: var(--height-footer);
+}
