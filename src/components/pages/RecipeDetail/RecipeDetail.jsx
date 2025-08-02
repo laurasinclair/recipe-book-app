@@ -1,10 +1,10 @@
 import { Link, useParams } from "react-router-dom";
 import "./recipeDetail.css";
 
-function RecipeDetail({ mockRecipeList, setTitle }) {
+function RecipeDetail({ recipes, setTitle }) {
   const { recipeId } = useParams();
-  const recipe = mockRecipeList.find((oneRecipe) => {
-    return oneRecipe.id === recipeId;
+  const recipe = recipes.find((oneRecipe) => {
+    return oneRecipe.id == recipeId;
   });
   setTitle(recipe.name);
   return (

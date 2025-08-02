@@ -18,7 +18,7 @@ function Sidebar() {
           </div>
           <div className="sideBar-item">
             <NavLink
-              to="*"
+              to="/add-recipe"
               className={({ isActive }) =>
                 isActive ? "selected nav-Link" : " nav-Link"
               }

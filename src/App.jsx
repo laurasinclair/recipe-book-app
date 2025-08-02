@@ -18,6 +18,11 @@ function App() {
   const [deletedList, setDeletedList] = useState([]);
   const [title, setTitle] = useState("Homepage");
 
+  const addNewRecipe = (newRecipe) => {
+    const updatedRecipes = [...recipes, newRecipe];
+    setRecipes(updatedRecipes);
+  };
+
   const handleFavourite = (e, id) => {
     e.stopPropagation();
     const newRecipeList = recipes.map((oneRecipe) => {
@@ -72,12 +77,7 @@ function App() {
             />
             <Route
               path="/recipe-detail/:recipeId"
-              element={
-                <RecipeDetail
-                  mockRecipeList={mockRecipeList}
-                  setTitle={setTitle}
-                />
-              }
+              element={<RecipeDetail recipes={recipes} setTitle={setTitle} />}
             />
             <Route
               path="/favourites"
@@ -85,7 +85,9 @@ function App() {
             />
             <Route
               path="/add-recipe"
-              element={<AddRecipe setTitle={setTitle} />}
+              element={
+                <AddRecipe setTitle={setTitle} addNewRecipe={addNewRecipe} />
+              }
             />
             <Route path="/about" element={<About setTitle={setTitle} />} />
             <Route

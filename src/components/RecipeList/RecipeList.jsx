@@ -1,4 +1,5 @@
 import RecipeCard from "../RecipeCard/RecipeCard";
+import AddRecipe from "../pages/AddRecipe/AddRecipe";
 
 // import "./recipeList.css"; // this imports it to the entire app
 import styles from "./RecipeList.module.css"; // scopes it to this component
