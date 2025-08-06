@@ -16,9 +16,9 @@ function Sidebar() {
 				<div className={styles.sideBarContainer}>
 
           {/* As all the elements are the same, this could be a mapped list: */}
-					{navLinks.map((link) => {
+					{navLinks.map((link, i) => {
 						return (
-							<div className={styles.sideBarItem}>
+							<div className={styles.sideBarItem} key={`${link.name}_${i}`}>
 								<NavLink
 									to={link.url}
                   
