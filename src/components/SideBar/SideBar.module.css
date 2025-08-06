@@ -1,21 +1,21 @@
-.sideBar-container {
+.sideBarContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.nav-Link {
+.navLink {
   text-decoration: none;
   color: rgb(85, 29, 29);
 }
 
-.sideBar-item {
+.sideBarItem {
   text-align: center;
   width: 100%;
 }
 
-.sideBar-item:hover {
-  transform: scale(1.2);
+.sideBarItem:hover {
+  transform: scale(1.1);
 }
 
 /* 
@@ -23,7 +23,7 @@ for clarity:
 aside .sideBar-container 👉 anything with the class .sideBar-container inside of an "aside"
 aside.sideBar-container 👉 any "aside" that has the class .sideBar-container
 */
-aside.sideBar-whole-container {
+aside.sideBarWholeContainer {
   display: flex;
   flex-direction: column;
   background-color: #ffe0b2;
@@ -41,6 +41,6 @@ aside.sideBar-whole-container {
   text-decoration: underline black;
 }
 
-.trash-link {
+.trashLink {
   margin-bottom: var(--height-footer);
 }

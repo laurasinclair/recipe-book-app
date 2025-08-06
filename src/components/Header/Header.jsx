@@ -1,11 +1,11 @@
 import recipeBookLogo from "../../assets/recipe-book-logo.png";
-import "./header.css";
+import styles from "./Header.module.css";
 
 function Header({ title }) {
   return (
     <>
       <header>
-        <div className="headerComponent">
+        <div className={styles.headerComponent}>
           <div>Recipe-Book</div>
           <div>{title}</div>
           <img src={recipeBookLogo} />

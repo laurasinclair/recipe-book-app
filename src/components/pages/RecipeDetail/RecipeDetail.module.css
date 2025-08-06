@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: [recipeDetailC1] 50% [recipeDetailC2] 50%;
 }
-.recipeDetail-container1,
-.recipeDetail-container2 {
+.recipeDetailContainer1,
+.recipeDetailContainer2 {
   width: 600px;
   margin: 40px auto;
   padding: 20px;
@@ -12,7 +12,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.recipeDetail-container1 img {
+.recipeDetailContainer1 img {
   height: 500px;
   width: 100%;
   /* object-fit: contain; */
@@ -23,23 +23,23 @@ h1 {
   color: #e64a19;
   margin-bottom: 10px;
 }
-.recipe-meta {
+.recipeMeta {
   text-align: center;
   font-size: 14px;
   color: #555;
   margin-bottom: 20px;
 }
-.recipe-meta p {
+.recipeMeta p {
   margin: 5px 0;
 }
-.recipe-content h2 {
+.recipeContent h2 {
   color: #d84315;
   border-bottom: 2px solid #ffe0b2;
   padding-bottom: 5px;
   margin-top: 20px;
 }
 
-.recipeDetail-container2 {
+.recipeDetailContainer2 {
   background-image: url("/images/recipeBookBackground.png");
   background-size: cover;
   display: flex;
@@ -49,20 +49,21 @@ h1 {
   color: black;
   font-size: bolder;
 }
-.recipeDetail-container2 ul,
+.recipeDetailContainer2 ul,
 ol {
   margin-left: 20px;
   line-height: 1.6;
 }
-.recipeDetail-container2 li {
+.recipeDetailContainer2 li {
   margin-bottom: 5px;
 }
-.recipeDetail-container2 .button-Container {
+.recipeDetailContainer2 .buttonContainer {
   display: flex;
-  justify-content: center;
+  gap: 60px;
   text-decoration: none;
 }
-.recipeDetail-container2 .homeBtn {
+.recipeDetailContainer2 .homeBtn,
+.editBtn {
   margin-top: 10px;
   padding: 8px 14px;
   background: #ff7043;
@@ -73,7 +74,16 @@ ol {
   font: inherit;
   font-size: 30px;
 }
-.recipeDetail-container2 .homeBtn:hover {
+
+.buttonContainer .homeBtn:hover,
+.editBtn:hover {
   background: #ff5722;
   text-decoration: none;
+  cursor: pointer;
+  transform: scale(1.2);
 }
+/* .buttonContainer .editBtn:hover {
+  background: #ff5722;
+  text-decoration: none;
+
+} */

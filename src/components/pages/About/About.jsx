@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import "./about.css";
+import styles from "./About.module.css";
 function About({ setTitle }) {
   setTitle("About the Project");
   return (
     <>
-      <div class="about-container">
+      <div class={styles.aboutContainer}>
         <h1>About This Recipe Book</h1>
         <p class="intro">
           Welcome to my personal recipe collection! This book is a growing
@@ -19,20 +19,20 @@ function About({ setTitle }) {
           but has grown into a full-fledged app!
         </p>
         <h2>Credits & Links</h2>
-        <p class="credits">
+        <p class={styles.credits}>
           Curated with ❤️ by Sakthi
           <br />
           <a
             href="https://github.com/karunya10/recipe-book-app"
             target="_blank"
-            class="github-link"
+            class={styles.githubLink}
           >
             GitHub Repository
           </a>
         </p>
 
         <Link to="/">
-          <button className="homeBtn">Home</button>
+          <button className={styles.homeBtn}>Home</button>
         </Link>
       </div>
     </>

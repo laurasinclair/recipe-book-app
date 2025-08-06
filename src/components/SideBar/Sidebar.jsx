@@ -1,57 +1,67 @@
-import "./sideBar.css";
+import styles from "./SideBar.module.css";
 
 import { NavLink } from "react-router-dom";
 function Sidebar() {
   return (
     <>
-      <aside id="sidebar" className="sideBar-whole-container">
-        <div className="sideBar-container">
-          <div className="sideBar-item">
+      <aside id={styles.sidebar} className={styles.sideBarWholeContainer}>
+        <div className={styles.sideBarContainer}>
+          <div className={styles.sideBarItem}>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "selected nav-Link" : "nav-Link"
+                isActive
+                  ? `${styles.selected} ${styles.navLink}`
+                  : `${styles.navLink}`
               }
             >
               View
             </NavLink>
           </div>
-          <div className="sideBar-item">
+          <div className={styles.sideBarItem}>
             <NavLink
               to="/add-recipe"
               className={({ isActive }) =>
-                isActive ? "selected nav-Link" : " nav-Link"
+                isActive
+                  ? `${styles.selected} ${styles.navLink}`
+                  : `${styles.navLink}`
               }
             >
               Add Recipe
             </NavLink>
           </div>
-          <div className="sideBar-item">
+          <div className={styles.sideBarItem}>
             <NavLink
               to="/Favourites"
               className={({ isActive }) =>
-                isActive ? "selected nav-Link" : "nav-Link"
+                isActive
+                  ? `${styles.selected} ${styles.navLink}`
+                  : `${styles.navLink}`
               }
             >
               Favourites
             </NavLink>
           </div>
-          <div className="sideBar-item">
+          <div className={styles.sideBarItem}>
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? "selected nav-Link" : "nav-Link"
+                isActive
+                  ? `${styles.selected} ${styles.navLink}`
+                  : `${styles.navLink}`
               }
             >
               About
             </NavLink>
           </div>
         </div>
-        <div className="sideBar-item trash-link">
+        <div className={`${styles.sideBarItem} ${styles.trashLink}`}>
           <NavLink
             to="/deletedList"
             className={({ isActive }) =>
-              isActive ? "selected nav-Link" : "nav-Link"
+              isActive
+                ? `${styles.selected} ${styles.navLink}`
+                : `${styles.navLink}`
             }
           >
             🗑️ Deleted

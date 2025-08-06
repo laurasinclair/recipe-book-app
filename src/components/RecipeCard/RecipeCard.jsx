@@ -1,4 +1,4 @@
-import "./recipeCard.css";
+import styles from "./RecipeCard.module.css";
 import { Link, useNavigate } from "react-router-dom";
 function RecipeCard({
   recipe,
@@ -17,41 +17,41 @@ function RecipeCard({
       {/* <div onClick={handleNavigate} key={recipe.id}> */}
       {/* 👇 key should be in the parent component (where you map() something) */}
       <div onClick={handleNavigate}>
-        <div className="recipeCard-Container">
-          <div className="imageWrapper">
-            {recipe.easy && <span className="badge">Easy</span>}
+        <div className={styles.recipeCardContainer}>
+          <div className={styles.imageWrapper}>
+            {recipe.easy && <span className={styles.badge}>Easy</span>}
             <img src={recipe.image}></img>
             <span
-              className="favourites"
+              className={styles.favourites}
               onClick={(e) => handleFavourite(e, recipe.id)}
             >
               {recipe.isFav === false ? "🤍" : "❤️"}
             </span>
           </div>
           <h2>{recipe.name}</h2>
-          <div className="cookTimeDetails">
-            <p className="globe">
-              <span className="textName">
+          <div className={styles.cookTimeDetails}>
+            <p className={styles.globe}>
+              <span className={styles.textName}>
                 <img src="/images/globe.png" />
               </span>
               {recipe.category}
             </p>
-            <div className="cookingInfo">
-              <p className="timerImage">
-                <span className="textName">
+            <div className={styles.cookingInfo}>
+              <p className={styles.timerImage}>
+                <span className={styles.textName}>
                   <img src="/images/time.png" />
                 </span>
                 {recipe.cookTime}
               </p>
               <p>
-                <span className="textName">Servings:&nbsp;</span>
+                <span className={styles.textName}>Servings:&nbsp;</span>
                 {recipe.servings}
               </p>
             </div>
           </div>
 
           <img
-            className="deleteButton"
+            className={styles.deleteButton}
             onClick={(e) => {
               handleDeletedItems(recipe.id);
               handleDelete(e, recipe.id);

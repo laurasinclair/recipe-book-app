@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import "./recipeDetail.css";
+import styles from "./RecipeDetail.module.css";
 
 function RecipeDetail({ recipes, setTitle }) {
   const { recipeId } = useParams();
@@ -9,11 +9,14 @@ function RecipeDetail({ recipes, setTitle }) {
   setTitle(recipe.name);
   return (
     <>
-      <div className="recipeDetailGridContainer">
-        <div id="recipeDetailC1" className="recipeDetail-container1">
+      <div className={styles.recipeDetailGridContainer}>
+        <div
+          id={styles.recipeDetailC1}
+          className={styles.recipeDetailContainer1}
+        >
           <img src={recipe.image}></img>
           <h1>{recipe.name}</h1>
-          <div className="recipe-meta">
+          <div className={styles.recipeMeta}>
             <p>
               <strong>Cuisine:</strong>
               {recipe.category}
@@ -29,7 +32,10 @@ function RecipeDetail({ recipes, setTitle }) {
           </div>
         </div>
 
-        <div id="recipeDetailC2" className="recipeDetail-container2">
+        <div
+          id={styles.recipeDetailC2}
+          className={styles.recipeDetailContainer2}
+        >
           <h2>Ingredients:</h2>
           <ul>
             {recipe.ingredients.map((ingredient, i) => {
@@ -43,10 +49,14 @@ function RecipeDetail({ recipes, setTitle }) {
               return <li key={`${instruction}_${i}`}>{instruction}</li>;
             })}
           </ol>
-
-          <Link to="/" className="button-Container">
-            <button class="homeBtn">Home</button>
-          </Link>
+          <div className={styles.buttonContainer}>
+            <Link to="/">
+              <button class={styles.homeBtn}>Home</button>
+            </Link>
+            <Link to={`/edit-recipe/${recipeId}`}>
+              <button class={styles.editBtn}>Edit</button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

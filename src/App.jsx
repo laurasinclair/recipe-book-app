@@ -53,6 +53,12 @@ function App() {
     });
     setDeletedList(filteredRecipeList);
   };
+  const addEditedRecipe = (editedRecipe) => {
+    const filteredRecipe = recipes.filter((recipe) => {
+      return recipe.id !== editedRecipe.id;
+    });
+    setRecipes([...filteredRecipe, editedRecipe]);
+  };
   return (
     <>
       <Header title={title}></Header>
@@ -86,7 +92,22 @@ function App() {
             <Route
               path="/add-recipe"
               element={
-                <AddRecipe setTitle={setTitle} addNewRecipe={addNewRecipe} />
+                <AddRecipe
+                  isEdit={false}
+                  setTitle={setTitle}
+                  addNewRecipe={addNewRecipe}
+                />
+              }
+            />
+            <Route
+              path="/edit-recipe/:recipeId"
+              element={
+                <AddRecipe
+                  setTitle={setTitle}
+                  isEdit={true}
+                  addEditedRecipe={addEditedRecipe}
+                  recipes={recipes}
+                />
               }
             />
             <Route path="/about" element={<About setTitle={setTitle} />} />

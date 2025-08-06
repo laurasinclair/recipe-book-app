@@ -1,20 +1,39 @@
 import { useState } from "react";
-import "./addRecipe.css";
+import styles from "./AddRecipe.module.css";
+import { useParams, useNavigate } from "react-router-dom";
 
-function AddRecipe({ setTitle, addNewRecipe }) {
+function AddRecipe({
+  isEdit,
+  setTitle,
+  addNewRecipe,
+  recipes,
+  addEditedRecipe,
+}) {
+  const { recipeId } = useParams();
+  const navigate = useNavigate();
+  const oneRecipe =
+    isEdit == true ? recipes.find((recipe) => recipe.id === recipeId) : null;
   setTitle("Add Recipe");
-  const [formData, setFormData] = useState({
-    id: Math.round(Math.random() * 200 + 200),
-    name: "",
-    category: "",
-    cookTime: "",
-    servings: "",
-    ingredients: "",
-    instructions: "",
-    image: "/images/defaultDish.png",
-    easy: false,
-    isFav: false,
-  });
+  const [formData, setFormData] = useState(
+    isEdit === false
+      ? {
+          id: Math.round(Math.random() * 200 + 200).toString(),
+          name: "",
+          category: "",
+          cookTime: "",
+          servings: "",
+          ingredients: "",
+          instructions: "",
+          image: "/images/defaultDish.png",
+          easy: false,
+          isFav: false,
+        }
+      : {
+          ...oneRecipe,
+          ingredients: oneRecipe.ingredients.join("\n"),
+          instructions: oneRecipe.instructions.join("\n"),
+        }
+  );
 
   const handleChange = (e) => {
     const { name, value, checked, type } = e.target;
@@ -33,7 +52,7 @@ function AddRecipe({ setTitle, addNewRecipe }) {
       ingredients: formData.ingredients.split("\n").map((i) => i.trim()),
       instructions: formData.instructions.split("\n").map((i) => i.trim()),
     };
-    addNewRecipe(recipe);
+    isEdit === false ? addNewRecipe(recipe) : addEditedRecipe(recipe);
     setFormData({
       id: "",
       name: "",
@@ -46,11 +65,14 @@ function AddRecipe({ setTitle, addNewRecipe }) {
       easy: false,
       isFav: false,
     });
+
+    isEdit === true ? navigate(`/recipe-detail/${recipe.id}`) : navigate("/");
   };
+
   return (
     <>
       <div>
-        <form onSubmit={handleSubmit} className="form-container">
+        <form onSubmit={handleSubmit} className={styles.formContainer}>
           <label>Image URL</label>
           <input
             type="text"
@@ -91,7 +113,7 @@ function AddRecipe({ setTitle, addNewRecipe }) {
             value={formData.servings}
             onChange={handleChange}
           />
-          <div className="difficultyCheckbox">
+          <div className={styles.difficultyCheckbox}>
             <label>Is Easy?</label>
             <input
               type="checkbox"

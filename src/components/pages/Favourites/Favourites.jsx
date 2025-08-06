@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import "./favourites.css";
+import styles from "./Favourites.module.css";
 function Favourite({ recipes, setTitle }) {
   setTitle("Favourites");
   const navigate = useNavigate();
@@ -10,36 +10,36 @@ function Favourite({ recipes, setTitle }) {
   return (
     <>
       {favouriteList.length === 0 && (
-        <p className="emptyList"> The list is Empty</p>
+        <p className={styles.emptyList}> The list is Empty</p>
       )}
-      <div className="wholeFavouriteList-container">
-        <div className="favouritesList-container">
+      <div className={styles.wholeFavouriteListContainer}>
+        <div className={styles.favouritesListContainer}>
           {favouriteList.map((oneRecipe) => {
             return (
               <div
-                className="favourites-container"
+                className={styles.favouritesContainer}
                 onClick={() => handleNavigate(oneRecipe.id)}
               >
-                <div className="imageWrapper" key={oneRecipe.id}>
+                <div className={styles.imageWrapper} key={oneRecipe.id}>
                   <img src={oneRecipe.image} />
                 </div>
                 <h2>{oneRecipe.name}</h2>
-                <div className="cookTimeDetails">
-                  <p className="globe">
-                    <span className="textName">
+                <div className={styles.cookTimeDetails}>
+                  <p className={styles.globe}>
+                    <span className={styles.textName}>
                       <img src="/images/globe.png" />
                     </span>
                     {oneRecipe.category}
                   </p>
-                  <div className="cookingInfo">
-                    <p className="timerImage">
-                      <span className="textName">
+                  <div className={styles.cookingInfo}>
+                    <p className={styles.timerImage}>
+                      <span className={styles.textName}>
                         <img src="/images/time.png" />
                       </span>
                       {oneRecipe.cookTime}
                     </p>
                     <p>
-                      <span className="textName">Servings:&nbsp;</span>
+                      <span className={styles.textName}>Servings:&nbsp;</span>
                       {oneRecipe.servings}
                     </p>
                   </div>
