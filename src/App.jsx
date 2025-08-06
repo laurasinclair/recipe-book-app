@@ -61,7 +61,8 @@ function App() {
   };
   return (
     <>
-      <Header title={title}></Header>
+       {/*<Header title={title}></Header> 👉 this syntax works, but it's good practice to use self-closing tags if the component doesn't have children */}
+      <Header title={title} />
 
       <div className="mainComponent-container">
         <Sidebar></Sidebar>

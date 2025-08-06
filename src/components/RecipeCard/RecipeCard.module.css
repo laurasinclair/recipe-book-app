@@ -2,14 +2,17 @@
   margin: 3px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* the image will always be at the very top, the last element at the very bottom */
   align-items: center;
   color: rgb(94, 30, 30);
-  box-shadow: 13px 6px 6px rgb(93 93 93 / 88%);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
   /* background-image: url("/images/recipeCardBackground.png"); */
+  border-radius: 8px;
+  height: 100%; /* they'll all have the same height */
 }
 .recipeCardContainer:hover {
   transform: scale(1.02);
+  cursor: pointer; /* makes it easy to see that it's a link */
 }
 .recipeCardContainer h2,
 .textName {

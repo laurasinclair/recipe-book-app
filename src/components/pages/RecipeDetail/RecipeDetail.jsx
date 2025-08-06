@@ -49,6 +49,9 @@ function RecipeDetail({ recipes, setTitle }) {
               return <li key={`${instruction}_${i}`}>{instruction}</li>;
             })}
           </ol>
+
+          {/* To style buttons, I would either have a class .btn, or create my own component <Button> </Button> */}
+          {/* That way, their styling doesn't depend on their container, and they always look the same */}
           <div className={styles.buttonContainer}>
             <Link to="/">
               <button class={styles.homeBtn}>Home</button>

@@ -42,6 +42,7 @@ function DeletedRecipes({ deletedList, handleAddDeletedItem, setTitle }) {
                   handleAddDeletedItem(recipe);
                 }}
                 src="/images/plus.png"
+                alt="Delete recipe" /* it's good practice to have an alt tag on all images - some frameworks like next won't let you skip it. Screen readers rely on this to describe images to blind people, so it should be descriptive (not a good space for marketing!) and concise (so it doesn't waste their time - there's already A LOT for a screen reader to go through on the internet) */
               />
             </div>
           );

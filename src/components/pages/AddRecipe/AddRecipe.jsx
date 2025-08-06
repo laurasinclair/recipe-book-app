@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./AddRecipe.module.css";
-import { useParams, useNavigate } from "react-router-dom";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 function AddRecipe({
   isEdit,
@@ -13,7 +13,14 @@ function AddRecipe({
   const navigate = useNavigate();
   const oneRecipe =
     isEdit == true ? recipes.find((recipe) => recipe.id === recipeId) : null;
-  setTitle("Add Recipe");
+
+  /* This is kind of a dirty fix - ideally, if you use a component for 2 different actions, it should be obvious from the naming and default behaviour */
+  /* But it's ok, as long as it works! it's practice :D */
+  const location = useLocation();
+  const pathSegment = location.pathname.split("/")[1];
+  setTitle(pathSegment.includes("edit") ? "Edit Recipe" : "Add recipe");
+
+
   const [formData, setFormData] = useState(
     isEdit === false
       ? {
@@ -30,7 +37,7 @@ function AddRecipe({
         }
       : {
           ...oneRecipe,
-          ingredients: oneRecipe.ingredients.join("\n"),
+          ingredients: oneRecipe.ingredients.join("\n"), /* smart! */
           instructions: oneRecipe.instructions.join("\n"),
         }
   );
@@ -70,79 +77,82 @@ function AddRecipe({
   };
 
   return (
-    <>
-      <div>
-        <form onSubmit={handleSubmit} className={styles.formContainer}>
-          <label>Image URL</label>
-          <input
-            type="text"
-            name="image"
-            value={formData.image}
-            onChange={handleChange}
-          />
-          <label>Recipe Title</label>
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
+		<>
+			<div>
+				<form onSubmit={handleSubmit} className={styles.formContainer}>
+					<label>Image URL</label>
+					<input
+						type="text"
+						name="image"
+						value={formData.image}
+						onChange={handleChange}
+					/>
+					<label>Recipe Title</label>
+					<input
+						type="text"
+						name="name"
+						value={formData.name}
+						onChange={handleChange}
+						required
+					/>
 
-          <label>Cook Time</label>
-          <input
-            type="text"
-            name="cookTime"
-            value={formData.cookTime}
-            onChange={handleChange}
-            required
-          />
+					<label>Cook Time</label>
+					<input
+						type="text"
+						name="cookTime"
+						value={formData.cookTime}
+						onChange={handleChange}
+						required
+					/>
 
-          <label>Cuisine</label>
-          <input
-            type="text"
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-          />
+					<label>Cuisine</label>
+					<input
+						type="text"
+						name="category"
+						value={formData.category}
+						onChange={handleChange}
+					/>
 
-          <label>Servings</label>
-          <input
-            type="number"
-            name="servings"
-            value={formData.servings}
-            onChange={handleChange}
-          />
-          <div className={styles.difficultyCheckbox}>
-            <label>Is Easy?</label>
-            <input
-              type="checkbox"
-              name="easy"
-              checked={formData.easy}
-              onChange={handleChange}
-            />
-          </div>
+					<label>Servings</label>
+					<input
+						type="number"
+						name="servings"
+						value={formData.servings}
+						onChange={handleChange}
+					/>
+					<div className={styles.difficultyCheckbox}>
+						<label>Is Easy?</label>
+						<input
+							type="checkbox"
+							name="easy"
+							checked={formData.easy}
+							onChange={handleChange}
+						/>
+					</div>
 
-          <label>Ingredients (one per line)</label>
-          <textarea
-            name="ingredients"
-            rows="4"
-            value={formData.ingredients}
-            onChange={handleChange}
-          ></textarea>
+					<label>Ingredients (one per line)</label>
+					<textarea
+						name="ingredients"
+						rows="4"
+						value={formData.ingredients}
+						onChange={handleChange}
+					></textarea>
 
-          <label>Instructions (one step per line)</label>
-          <textarea
-            name="instructions"
-            rows="4"
-            value={formData.instructions}
-            onChange={handleChange}
-          ></textarea>
+					<label>Instructions (one step per line)</label>
+					<textarea
+						name="instructions"
+						rows="4"
+						value={formData.instructions}
+						onChange={handleChange}
+					></textarea>
 
-          <button type="submit">Add Recipe</button>
-        </form>
-      </div>
-    </>
+					<button type="submit">
+						{pathSegment.includes("edit") ? "Edit" : "Add"}{" "}
+						Recipe
+					</button>
+				</form>
+			</div>
+		</>
   );
 }
 export default AddRecipe;

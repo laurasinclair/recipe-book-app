@@ -9,14 +9,13 @@ function Main({
 }) {
   setTitle("Home Page");
   return (
-    <>
-      <RecipeList
-        recipes={recipes}
-        setRecipes={setRecipes}
-        handleFavourite={handleFavourite}
-        handleDeletedItems={handleDeletedItems}
-      />
-    </>
+    // If you only have one element, you can get rid of the <></>
+    <RecipeList
+      recipes={recipes}
+      setRecipes={setRecipes}
+      handleFavourite={handleFavourite}
+      handleDeletedItems={handleDeletedItems}
+    />
   );
 }
 

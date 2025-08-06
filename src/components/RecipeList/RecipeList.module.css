@@ -7,7 +7,7 @@
   display: grid;
 
   /* grid-template-columns: repeat(7, 200px); */
-  grid-template-columns: auto auto auto auto; /* 👉 allows us to have a flexible width */
+  grid-template-columns: repeat(1, auto);
   gap: 20px;
 
   /* justify-content: center; 👉 only applies if display:flex */
@@ -17,4 +17,25 @@
 
   /* margin: 20px; */
   margin: 0 auto; /* 👉 0 top and bottom (it's handled by the parent's padding), centered horizontally */
+}
+
+
+/* A little bit of responsive design :D */
+
+@media screen and (min-width: 576px) {
+  .recipeListContainer {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .recipeListContainer {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .recipeListContainer {
+    grid-template-columns: repeat(4, auto);
+  }
 }

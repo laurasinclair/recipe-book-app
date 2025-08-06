@@ -20,7 +20,8 @@ function RecipeCard({
         <div className={styles.recipeCardContainer}>
           <div className={styles.imageWrapper}>
             {recipe.easy && <span className={styles.badge}>Easy</span>}
-            <img src={recipe.image}></img>
+            {/* <img src={recipe.image}></img> */} {/* 👉 this syntax works, but it's good practice to use self-closing tags: */}
+            <img src={recipe.image} />
             <span
               className={styles.favourites}
               onClick={(e) => handleFavourite(e, recipe.id)}
