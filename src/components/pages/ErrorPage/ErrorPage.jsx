@@ -1,11 +1,12 @@
 import errorGif from "../../../assets/Error404.gif";
 
-import "./errorPage.css";
+import styles from "./ErrorPage.module.css";
 
-function ErrorPage() {
+function ErrorPage({ setTitle }) {
+  setTitle("Error Page");
   return (
     <>
-      <div className="errorImage">
+      <div className={styles.errorImage}>
         <img src={errorGif} />
       </div>
     </>

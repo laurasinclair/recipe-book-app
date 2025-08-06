@@ -1,12 +1,38 @@
-# React + Vite
+# 🍽️ My Recipe Book
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive Recipe Book built with **React**.  
+This app allows users to browse, add, and manage recipes with a clean UI.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📖 **View Recipes** – Browse a list of available recipes
+- ➕ **Add New Recipes** – Add recipes with title, ingredients, and instructions
+- 🖼 **Upload or Use Default Images** – Each recipe can have an image (default if none provided)
+- 🔍 **Search & Filter** – Quickly find recipes by name
+- 🗑 **Manage Recipes** – Edit or delete saved recipes
 
-## Expanding the ESLint configuration
+## ⚙️ Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. *Clone the repository*
+2. *Navigate into the project*
+3. *Install dependencies*
+
+      - npm install
+
+4. *Run the App*
+
+      - npm run dev
+
+5. *Open your browser at http://localhost:*
+
+## 🛠️ Tech Stack
+
+- **React** (Frontend library)
+- **React Router** (Navigation)
+- **JavaScript**
+- **CSS**
+- **HTML**
+
+## 👉 Github Repository
+
+[My-Recipe-Book](https://github.com/karunya10/recipe-book-app)

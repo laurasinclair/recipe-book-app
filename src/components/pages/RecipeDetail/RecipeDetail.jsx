@@ -1,18 +1,22 @@
 import { Link, useParams } from "react-router-dom";
-import "./recipeDetail.css";
+import styles from "./RecipeDetail.module.css";
 
-function RecipeDetail({ mockRecipeList }) {
+function RecipeDetail({ recipes, setTitle }) {
   const { recipeId } = useParams();
-  const recipe = mockRecipeList.find((oneRecipe) => {
-    return oneRecipe.id === recipeId;
+  const recipe = recipes.find((oneRecipe) => {
+    return oneRecipe.id == recipeId;
   });
+  setTitle(recipe.name);
   return (
     <>
-      <div className="recipeDetail-container">
-        <img src={recipe.image}></img>
-        <div className="recipe-content">
+      <div className={styles.recipeDetailGridContainer}>
+        <div
+          id={styles.recipeDetailC1}
+          className={styles.recipeDetailContainer1}
+        >
+          <img src={recipe.image}></img>
           <h1>{recipe.name}</h1>
-          <div className="recipe-meta">
+          <div className={styles.recipeMeta}>
             <p>
               <strong>Cuisine:</strong>
               {recipe.category}
@@ -26,7 +30,12 @@ function RecipeDetail({ mockRecipeList }) {
               {recipe.servings}
             </p>
           </div>
+        </div>
 
+        <div
+          id={styles.recipeDetailC2}
+          className={styles.recipeDetailContainer2}
+        >
           <h2>Ingredients:</h2>
           <ul>
             {recipe.ingredients.map((ingredient, i) => {
@@ -40,10 +49,14 @@ function RecipeDetail({ mockRecipeList }) {
               return <li key={`${instruction}_${i}`}>{instruction}</li>;
             })}
           </ol>
-
-          <Link to="/">
-            <button>Home</button>
-          </Link>
+          <div className={styles.buttonContainer}>
+            <Link to="/">
+              <button class={styles.homeBtn}>Home</button>
+            </Link>
+            <Link to={`/edit-recipe/${recipeId}`}>
+              <button class={styles.editBtn}>Edit</button>
+            </Link>
+          </div>
         </div>
       </div>
     </>

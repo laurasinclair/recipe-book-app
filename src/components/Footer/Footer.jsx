@@ -1,8 +1,8 @@
-import "./footer.css";
+import styles from "./Footer.module.css";
 function Footer() {
   return (
     <>
-      <footer>
+      <footer className={styles.footerContainer}>
         <p>
           Created by <strong>Sakthi Karunya</strong> |{" "}
           <a

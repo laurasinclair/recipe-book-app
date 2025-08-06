@@ -1,0 +1,101 @@
+.deletedListContainer {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  margin: 0 auto;
+}
+.deleteRecipeCardContainer {
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(94, 30, 30);
+  box-shadow: 13px 6px 6px rgb(93 93 93 / 88%);
+}
+
+.deleteRecipeCardContainer:hover {
+  transform: scale(1.02);
+}
+.imageWrapper {
+  position: relative;
+  display: block;
+}
+.deleteRecipeCardContainer h4 {
+  border-bottom: 1px dotted grey;
+  margin: 10px 0 0 0;
+}
+
+.textName img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  padding-top: 10px;
+  border-bottom: none;
+}
+.cookingInfo .textName {
+  border-bottom: none;
+}
+.timerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timerImage .textName {
+  border-bottom: none;
+}
+.imageWrapper img {
+  width: 100%;
+  /* height: 200px; */
+  border-radius: 10px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0; /* 👉 little trick to make it look well integrated to the card :D */
+  aspect-ratio: 5/3; /* 👉 pure CSS magic (not supported by all browsers yet, but there are workarounds) */
+}
+
+.cookTimeDetails {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cookingInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.cookingInfo p {
+  margin: 0px;
+}
+
+.globe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe .textName {
+  border-bottom: none;
+}
+.addButton {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  height: 20px;
+}
+.addButton:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.emptyList {
+  /* display: flex;
+  justify-content: center;
+  margin-right: 200px;
+  margin-top: 25%;
+  font-size: x-large; */
+  position: absolute;
+  top: 40%;
+  left: 49%;
+}

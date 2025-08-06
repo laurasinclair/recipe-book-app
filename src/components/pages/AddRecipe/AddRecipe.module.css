@@ -1,0 +1,39 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fffaf5;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  gap: 10px;
+}
+input {
+  height: 35px;
+}
+.difficultyCheckbox {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.difficultyCheckbox input {
+  margin-top: 4px;
+}
+.formContainer button {
+  align-self: center;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #ff7043;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: #ff7043;
+  font: inherit;
+  width: 200px;
+}
+.formContainer button:hover {
+  background: #ff5722;
+  transform: scale(1.1);
+  cursor: pointer;
+}

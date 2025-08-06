@@ -1,27 +1,53 @@
-.recipeCard-Container {
+.recipeCardContainer {
   margin: 3px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: rgb(94, 30, 30);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 13px 6px 6px rgb(93 93 93 / 88%);
+  /* background-image: url("/images/recipeCardBackground.png"); */
 }
-.recipeCard-Container:hover {
+.recipeCardContainer:hover {
   transform: scale(1.02);
 }
-.recipeCard-Container h4,
+.recipeCardContainer h2,
 .textName {
   border-bottom: 1px dotted grey;
 }
+.textName img {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+  padding-top: 10px;
+  border-bottom: none;
+}
+.cookingInfo .textName {
+  border-bottom: none;
+}
+
+.timerImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.timerImage .textName {
+  border-bottom: none;
+}
 .deleteButton {
   margin-top: 10px;
+  margin-bottom: 20px;
   border: none;
+  height: 20px;
+  cursor: pointer;
 }
 
 .imageWrapper {
   position: relative;
   display: block;
+}
+.recipeCard-Container h2 {
+  margin: 10px 0 0 0;
 }
 
 .imageWrapper img {
@@ -59,9 +85,34 @@
   cursor: pointer;
 }
 .cookTimeDetails {
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
 .deleteButton :hover {
-  transform: scale(1.02);
-  cursor: pointer;
+  transform: scale(2);
+}
+
+.cookingInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.cookingInfo p {
+  margin: 0px;
+}
+
+.globe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.globe .textName {
+  border-bottom: none;
 }
